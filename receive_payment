@@ -1,0 +1,15 @@
+curl -X POST \
+        -H 'accept: application/json' \
+        -H 'content-type: application/json' \
+        https://api.mercadopago.com/v1/payments?access_token=TEST-3538639200668192-112919-746c1b4f7ccbbbc466c4946c9fe77759-190220543 \
+        -d '{
+                "transaction_amount": 100,
+                "token": "APP_USR-3538639200668192-021106-7c828dcfb162f20670189210b988ffbe-403128331",
+                "description": "Title of what you are paying for",
+                "installments": 1,
+                "payer": {
+                        "email": "test_user_58153194@testuser.com"
+                },
+                "payment_method_id": "visa",
+                "application_fee": 2.56
+        }'
